@@ -4,8 +4,8 @@ FROM openjdk:17
 # ワーキングディレクトリの設定
 WORKDIR /app
 
-# アプリケーションのJARファイルをコンテナにコピー
-COPY build/libs/*.jar app.jar
+# 正確なJARファイル名を指定してコピーする
+COPY build/libs/Sample-0.0.1-SNAPSHOT.jar app.jar
 
 # ポートの公開
 EXPOSE 8080
